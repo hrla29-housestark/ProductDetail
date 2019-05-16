@@ -11,6 +11,7 @@ class App extends React.Component{
     };
     this.changeView = this.changeView.bind(this);
     this.renderViews = this.renderViews.bind(this);
+    this.setStyle = this.setStyle.bind(this);
   }
 
   changeView(option) {
@@ -27,19 +28,22 @@ class App extends React.Component{
     }
   }
 
+  setStyle(options, Active, nonActive) {
+    return this.state.views === options ? Active : nonActive
+  }
  
   render() {
     return(
       <div className={Style.pdMain}>
         <div>PRODUCT DETAILS</div>
           <ul>
-            <li className={this.state.views === 'description' ? Style.pdLiActive : Style.pdLi} 
+            <li className={this.setStyle('description', Style.pdLiActive, Style.pdLi)} 
                 onClick={() => {this.changeView('description')}}>
-              <button className={this.state.views === 'description' ? Style.pdBtnActive : Style.pdBtn}>DESCRIPTION</button>
+              <button className={this.setStyle('description', Style.pdBtnActive, Style.pdBtn)}>DESCRIPTION</button>
             </li>
-            <li className={this.state.views === 'specifications' ? Style.pdLiActive : Style.pdLi}  
+            <li className={this.setStyle('specifications', Style.pdLiActive, Style.pdLi)}  
                 onClick={() => {this.changeView('specifications')}}>
-              <button className={this.state.views === 'specifications' ? Style.pdBtnActive : Style.pdBtn}>SPECIFICATION</button>
+              <button className={this.setStyle('specifications', Style.pdBtnActive, Style.pdBtn)}>SPECIFICATION</button>
             </li>
           </ul>
           <div>
