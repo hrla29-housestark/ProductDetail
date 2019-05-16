@@ -1,0 +1,59 @@
+.pdMain {
+  font-family: "adihausDINBold";
+  font-size: 36px;
+}
+
+.pdLi {
+  font-size: 13px;
+  border: 1px solid black;
+  border-bottom: 2px solid black;
+  line-height: 16px;
+  list-style: none;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 50%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.pdBtn {
+  margin: 0;
+  color: #767677;
+  font-size: 13px;
+  text-decoration: none;
+  font-family: "adihausDINBold";
+  padding: 16px 10px;
+  text-align: center;
+  letter-spacing: 3px;
+  cursor: pointer;
+  background-color: 'buttonface';
+  filter: contrast(4.54);
+}
+
+@font-face {
+  font-family: 'adihausDINBold';
+  src: url('../assets/AdihausDIN-Bold.woff2') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'adihausDINRegular';
+  src: url('../assets/AdihausDIN-Regular.woff2') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'adineuePROBold';
+  src: url('../assets/adineuePRO-Bold.woff2') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'adineuePRORegular';
+  src: url('../assets/adineuePRO-Regular.woff2') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
