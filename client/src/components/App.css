@@ -5,8 +5,8 @@
 
 .pdLi {
   font-size: 13px;
-  border: 1px solid black;
-  border-bottom: 2px solid black;
+  border: 1px solid #767677;
+  border-bottom: 1px solid #767677;
   line-height: 16px;
   list-style: none;
   box-sizing: border-box;
@@ -28,6 +28,38 @@
   cursor: pointer;
   background-color: 'buttonface';
   filter: contrast(4.54);
+}
+
+.pdLiActive {
+  font-size: 13px;
+  border: 1px solid black;
+  border-bottom: 3px solid black;
+  line-height: 16px;
+  list-style: none;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 50%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.pdBtnActive {
+  margin: 0;
+  color: black;
+  font-size: 13px;
+  text-decoration: none;
+  font-family: "adihausDINBold";
+  padding: 16px 10px;
+  text-align: center;
+  letter-spacing: 3px;
+  cursor: pointer;
+  background-color: 'buttonface';
+  filter: contrast(4.54);
+}
+
+.pdBtn:hover {
+  color: black;
+  font-family: "adihausDINBold";
 }
 
 @font-face {
