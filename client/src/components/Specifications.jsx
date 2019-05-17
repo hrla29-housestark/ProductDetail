@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Specifications = () => {
+const Specifications = (props) => {
+  console.log(props.data, 'specification')
   return(
     <div>
-      this is specifications
+      specification
     </div>
   )
 };

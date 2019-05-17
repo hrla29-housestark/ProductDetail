@@ -1,18 +1,37 @@
 import React from 'react';
-import Style from './App.css';
+import Style from './ProductDetail.css';
 import Description from './Description.jsx';
 import Specifications from './Specifications.jsx';
 
-class App extends React.Component{
+import axios from 'axios';
+
+class ProductDetail extends React.Component{
   constructor() {
     super();
     this.state = {
-      views: 'description'
+      views: 'description',
+      data: []
     };
     this.changeView = this.changeView.bind(this);
     this.renderViews = this.renderViews.bind(this);
     this.setStyle = this.setStyle.bind(this);
+    this.handleFetchPD = this.handleFetchPD.bind(this);
   }
+
+  componentDidMount() {
+    this.handleFetchPD();
+  }
+
+  handleFetchPD() {
+    let id = 2;
+    axios
+    .get(`./api/productDetails/${id}`)
+    .then(({data}) => {
+      this.setState({
+        data: data[0]
+      })
+    })
+  }  
 
   changeView(option) {
     this.setState({
@@ -22,9 +41,9 @@ class App extends React.Component{
 
   renderViews() {
     if (this.state.views === 'description') {
-      return <Description />;
+      return <Description data={this.state.data}/>;
     } else if (this.state.views === 'specifications') {
-      return <Specifications />
+      return <Specifications data={this.state.data}/>
     }
   }
 
@@ -54,4 +73,4 @@ class App extends React.Component{
   }
 }
 
-export default App;
+export default ProductDetail;

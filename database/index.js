@@ -4,12 +4,14 @@ mongoose.Promise = global.Promise;
 
 mongoose.connect('mongodb://localhost/fecadidas', {useNewUrlParser: true});
 
-const adidasSchema = mongoose.schema({
+const adidasSchema = mongoose.Schema({
   productId: {type: Number},
   productName: {type: String},
   imageUrl: {type: Array},
   price: {type: Number},
-  detail: {type: String},
+  productType: {type: String},
+  description: {type: String},
+  descriptionSlogan: {type: String},
   specification: {type: Array}
 });
 

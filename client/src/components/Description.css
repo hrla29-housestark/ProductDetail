@@ -1,0 +1,27 @@
+h4 {
+  letter-spacing: 1.5px;
+  font-size: 26px;
+  display: block;
+  margin: 0px 0px 20px;
+}
+
+.pddMain {
+  margin: 0px 0px 0px 43px;
+}
+
+h5 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 16px;
+}
+
+p {
+  font-family: 'adihausDINRegular';
+  font-size: 16px;
+  line-height: 22px;
+  display: block;
+  /* margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px; */
+}
