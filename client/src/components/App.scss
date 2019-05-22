@@ -1,3 +1,5 @@
+@import './ProductDetail.scss';
+
 *,
 *::after,
 *::before {
@@ -10,6 +12,10 @@ html {
   font-size: 100%;
   box-sizing: border-box;
   font-family: "adihausDINBold", Helvetica, Arial, sans-serif;
+}
+
+.test {
+  background-color: black;
 }
 
 @font-face {

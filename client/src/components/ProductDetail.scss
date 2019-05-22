@@ -1,69 +1,81 @@
-.pdMain {
-  font-family: "adihausDINBold";
-  font-size: 36px;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
+.pdMainContainer {
+  margin-bottom: 2.5rem;
 }
 
-.pdLi {
-  font-size: 13px;
-  border: 1px solid #767677;
-  border-bottom: 1px solid #767677;
-  line-height: 16px;
-  list-style: none;
-  box-sizing: border-box;
-  display: inline-block;
-  width: 50%;
-  cursor: pointer;
-  text-align: center;
+.pdTitle {
+  font-size: 2.25rem;
+  margin-bottom: 40px;
+  padding: 0 15px;
 }
 
-.pdBtn {
-  margin: 0;
-  color: #767677;
-  font-size: 13px;
-  text-decoration: none;
-  // font-family: "adihausDINBold";
-  padding: 16px 10px;
-  text-align: center;
-  letter-spacing: 3px;
-  cursor: pointer;
-  background-color: 'buttonface';
-  filter: contrast(4.54);
-}
 
-.pdLiActive {
-  font-size: 13px;
-  border: 1px solid black;
-  border-bottom: 3px solid black;
-  line-height: 16px;
-  list-style: none;
-  box-sizing: border-box;
-  display: inline-block;
-  width: 50%;
-  cursor: pointer;
-  text-align: center;
-}
 
-.pdBtnActive {
-  margin: 0;
-  color: black;
-  font-size: 13px;
-  text-decoration: none;
-  // font-family: "adihausDINBold";
-  padding: 16px 10px;
-  text-align: center;
-  letter-spacing: 3px;
-  cursor: pointer;
-  background-color: 'buttonface';
-  filter: contrast(4.54);
-}
+// .pdMain {
+//   font-family: "adihausDINBold";
+//   font-size: 36px;
+//   position: relative;
+//   padding-left: 15px;
+//   padding-right: 15px;
+// }
 
-.pdBtn:hover {
-  color: black;
-  font-family: "adihausDINBold";
-}
+// .pdLi {
+//   font-size: 13px;
+//   border: 1px solid #767677;
+//   border-bottom: 1px solid #767677;
+//   line-height: 16px;
+//   list-style: none;
+//   box-sizing: border-box;
+//   display: inline-block;
+//   width: 50%;
+//   cursor: pointer;
+//   text-align: center;
+// }
+
+// .pdBtn {
+//   margin: 0;
+//   color: #767677;
+//   font-size: 13px;
+//   text-decoration: none;
+//   // font-family: "adihausDINBold";
+//   padding: 16px 10px;
+//   text-align: center;
+//   letter-spacing: 3px;
+//   cursor: pointer;
+//   background-color: 'buttonface';
+//   filter: contrast(4.54);
+// }
+
+// .pdLiActive {
+//   font-size: 13px;
+//   border: 1px solid black;
+//   border-bottom: 3px solid black;
+//   line-height: 16px;
+//   list-style: none;
+//   box-sizing: border-box;
+//   display: inline-block;
+//   width: 50%;
+//   cursor: pointer;
+//   text-align: center;
+// }
+
+// .pdBtnActive {
+//   margin: 0;
+//   color: black;
+//   font-size: 13px;
+//   text-decoration: none;
+//   // font-family: "adihausDINBold";
+//   padding: 16px 10px;
+//   text-align: center;
+//   letter-spacing: 3px;
+//   cursor: pointer;
+//   background-color: 'buttonface';
+//   filter: contrast(4.54);
+// }
+
+// .pdBtn:hover {
+//   color: black;
+//   font-family: "adihausDINBold";
+// }
 
 // @font-face {
 //   font-family: 'adihausDINBold';

@@ -1,8 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 h4 {
   letter-spacing: 1.5px;
@@ -10,11 +6,6 @@ h4 {
   display: inline-block;
   margin: 0px 0px 20px;
   width: 50%;
-}
-
-.pddMain {
-  margin: 0px 0px 0px 0px;
-
 }
 
 h5 {
@@ -46,18 +37,12 @@ p {
 .imageContainer {
   border: 1px solid black;
   flex: 0 1 50%;
-  /* align-items: ; */
-  /* width: 50%; */
+
 }
 
 .image {
   width: 100%;
   height: auto;
   
-  /* max-width: 640px; */
 }
 
-/* .column {
-  flex: 50%;
-  padding: 10px;
-} */

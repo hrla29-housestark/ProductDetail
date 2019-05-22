@@ -15,24 +15,11 @@ class ProductDetail extends React.Component{
     this.changeView = this.changeView.bind(this);
     this.renderViews = this.renderViews.bind(this);
     this.setStyle = this.setStyle.bind(this);
-    // this.handleFetchPD = this.handleFetchPD.bind(this);
   }
 
   componentDidMount() {
     this.props.handleFetchPD();
   }
-
-  // handleFetchPD() {
-  //   let id = 2;
-  //   axios
-  //   .get(`./api/productDetails/${id}`)
-  //   .then(({data}) => {
-  //     this.props.handleSelectedProduct(data);
-  //     this.setState({
-  //       data: data[0]
-  //     }, () => {console.log(data)});
-  //   })
-  // }  
 
   changeView(option) {
     this.setState({
@@ -54,8 +41,8 @@ class ProductDetail extends React.Component{
  
   render() {
     return(
-      <div className={Style.pdMain}>
-        <div>PRODUCT DETAILS</div>
+      <div className={Style.pdMainContainer}>
+        <h3 className={Style.pdTitle}>PRODUCT DETAILS</h3>
           <ul>
             <li className={this.setStyle('description', Style.pdLiActive, Style.pdLi)} 
                 onClick={() => {this.changeView('description')}}>

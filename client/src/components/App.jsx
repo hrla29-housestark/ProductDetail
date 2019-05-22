@@ -45,6 +45,7 @@ class App extends React.Component{
   render() {
     return(
       <div>
+        <div className={Style.test}>hi</div>
         <div><ProductDetail data={this.state.data} handleFetchPD={this.handleFetchPD}/></div>
         <div><YouMayAlsoLike items={this.state.items}/></div>
       </div>

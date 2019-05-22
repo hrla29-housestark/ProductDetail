@@ -22,31 +22,22 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.(s*)css$/,
         loader: combinedLoaders([
           {
             loader: 'style-loader'
-          }, {
+          },
+          {
             loader: 'css-loader', 
             query: {
               modules: true, 
               localIdentName: '[name]__[loader]__[hash:base64:5]'
             }
+          },{
+            loader: "sass-loader",
+             // compiles Sass to CSS
           }
         ])
-      }, {
-        test: /\.scss$/,
-        use: [
-          {
-            loader: "style-loader" // creates style nodes from JS strings
-          },
-          {
-            loader: "css-loader" // translates CSS into CommonJS
-          },
-          {
-            loader: "sass-loader" // compiles Sass to CSS
-          }
-        ]
       }, 
       {
         test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
