@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from './Specifications.css';
+import Style from './Specifications.scss';
 
 const Specifications = (props) => {
   return(

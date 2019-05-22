@@ -1,13 +1,13 @@
 import React from 'react';
-import Style from './ProductDetail.css';
+import Style from './ProductDetail.scss';
 import Description from './Description.jsx';
 import Specifications from './Specifications.jsx';
 
 import axios from 'axios';
 
 class ProductDetail extends React.Component{
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       views: 'description',
       data: []
@@ -15,23 +15,24 @@ class ProductDetail extends React.Component{
     this.changeView = this.changeView.bind(this);
     this.renderViews = this.renderViews.bind(this);
     this.setStyle = this.setStyle.bind(this);
-    this.handleFetchPD = this.handleFetchPD.bind(this);
+    // this.handleFetchPD = this.handleFetchPD.bind(this);
   }
 
   componentDidMount() {
-    this.handleFetchPD();
+    this.props.handleFetchPD();
   }
 
-  handleFetchPD() {
-    let id = 2;
-    axios
-    .get(`./api/productDetails/${id}`)
-    .then(({data}) => {
-      this.setState({
-        data: data[0]
-      })
-    })
-  }  
+  // handleFetchPD() {
+  //   let id = 2;
+  //   axios
+  //   .get(`./api/productDetails/${id}`)
+  //   .then(({data}) => {
+  //     this.props.handleSelectedProduct(data);
+  //     this.setState({
+  //       data: data[0]
+  //     }, () => {console.log(data)});
+  //   })
+  // }  
 
   changeView(option) {
     this.setState({
@@ -41,9 +42,9 @@ class ProductDetail extends React.Component{
 
   renderViews() {
     if (this.state.views === 'description') {
-      return <Description data={this.state.data}/>;
+      return <Description data={this.props.data}/>;
     } else if (this.state.views === 'specifications') {
-      return <Specifications data={this.state.data}/>
+      return <Specifications data={this.props.data}/>
     }
   }
 
