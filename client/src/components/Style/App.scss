@@ -11,37 +11,39 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
-  font-family: "adihausDINBold", Helvetica, Arial, sans-serif;
+  font-family: "adineuePROBold", Helvetica, Arial, sans-serif;
 }
 
-.test {
-  background-color: black;
+.container {
+  margin-bottom: 2.5rem;
+  padding: 0.94rem;
 }
+
 
 @font-face {
   font-family: 'adihausDINBold';
-  src: url('../assets/AdihausDIN-Bold.woff2') format('truetype');
+  src: url('../../assets/AdihausDIN-Bold.woff2') format('truetype');
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'adihausDINRegular';
-  src: url('../assets/AdihausDIN-Regular.woff2') format('truetype');
+  src: url('../../assets/AdihausDIN-Regular.woff2') format('truetype');
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'adineuePROBold';
-  src: url('../assets/adineuePRO-Bold.woff2') format('truetype');
+  src: url('../../assets/adineuePRO-Bold.woff2') format('truetype');
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'adineuePRORegular';
-  src: url('../assets/adineuePRO-Regular.woff2') format('truetype');
+  src: url('../../assets/adineuePRO-Regular.woff2') format('truetype');
   font-style: normal;
   font-weight: normal;
 }

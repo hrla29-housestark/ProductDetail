@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from './App.scss';
+import Style from './Style/App.scss';
 import ProductDetail from './ProductDetail.jsx';
 import YouMayAlsoLike from './youMayAlsoLike/YouMayAlsoLike.jsx';
 import axios from 'axios';
@@ -16,6 +16,11 @@ class App extends React.Component{
     this.handleFindSimilarItems = this.handleFindSimilarItems.bind(this);
   }
 
+  componentDidMount() {
+    this.handleFetchPD();
+    // this.handleFindSimilarItems();
+  }
+
   handleFetchPD() {
     let id = 2;
     axios
@@ -23,21 +28,18 @@ class App extends React.Component{
     .then(({data}) => {
       this.setState({
         data: data[0],
-      });
-      this.handleFindSimilarItems();
+      }, () => { this.handleFindSimilarItems() });
     })
     .catch(err => console.error(err));
   }  
 
   handleFindSimilarItems() {
-    this.state.data
-    // console.log(this.state.targetType, 'here')
     axios
     .get(`/api/youMayAlsoLike/${this.state.data.productType}`)
     .then(({data}) => {
       this.setState({
         items: data,
-      }, () => {console.log(this.state.items)})
+      })
     })
     .catch(err => console.error(err));
   }
@@ -45,8 +47,7 @@ class App extends React.Component{
   render() {
     return(
       <div>
-        <div className={Style.test}>hi</div>
-        <div><ProductDetail data={this.state.data} handleFetchPD={this.handleFetchPD}/></div>
+        <div className={Style.container}><ProductDetail data={this.state.data} handleFetchPD={this.handleFetchPD}/></div>
         <div><YouMayAlsoLike items={this.state.items}/></div>
       </div>
     )

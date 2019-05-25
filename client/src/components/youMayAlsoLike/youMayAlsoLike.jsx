@@ -1,27 +1,34 @@
 import React from 'react';
-import List from './List.jsx';
+import YouMayAlsoLikeList from './YouMayAlsoLikeList.jsx';
+import Style from '../Style/YouMayAlsoLike.scss'
 import axios from 'axios';
 
 class YouMayAlsoLike extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      simlarItems: this.props.items
     }
+    
+  }
+
+  componentDidMount() {
+    this.setState({
+      simlarItems: this.props.items
+    }, () => console.log(this.state))
   }
 
   render() {
-    console.log(this.props.items, 'from ymal')
+    console.log(this.state.simlarItems, 'like')
     return(
-      <div>
-        <h3>You May Also Like</h3>
-        <div>
-          
-          <List items={this.props.items}/>
+      <div className={Style.pdMainContainer}>
+        <h3 className={Style.product_detail_title}>You May Also Like</h3>
+        <div className={Style.row}>
+          <YouMayAlsoLikeList simlarItems={this.state.simlarItems}/>
         </div>
         <div>
           <ul>
-            <li>2</li>
+            <li>1</li>
             <li>2</li>
             <li>3</li>
             <li>4</li>

@@ -1,0 +1,32 @@
+.list_container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 4.16667%;
+  width: 91.66667%;
+  // overflow-x: auto;
+  padding: 0 15px;
+  // float: left;
+  // display: flex;
+  overflow: hidden;
+}
+
+.list_wrapper {
+  left: -500px;
+  // overflow: hidden;
+  display: flex;
+  position: relative;
+  // white-space: nowrap;
+  max-width: 1366px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  //
+  // flex-wrap: wrap;
+  // &::after {
+  //   content: '';
+  //   flex: 0 0 12px; 
+  // }
+
+	// display: flex;
+	// flex-wrap: wrap;
+}

@@ -1,0 +1,128 @@
+// .product_card_container {
+//   display: block;
+//   background-color: #fff;
+//   cursor: pointer;
+//   position: relative;
+//   border: 1px solid transparent;
+//   // width: 100%;
+//   float: left; 
+//   min-width: 0;
+//   // box-orient:horizontal;
+//   flex: 0 1 (100 / 4 ) * 1%;
+// }
+
+@mixin test($order) {
+  order: $order;
+}
+
+
+.product_card_container {
+  padding: 0 5px;
+  width: 25%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 0;
+  margin: 0;
+  // flex: 2 1 auto;
+  // flex-wrap: nowrap;
+  // overflow: hidden;
+  justify-content: space-between;
+}
+
+.product_card_container_left {
+  transform: translateX(-100%);
+  padding: 0 5px;
+  width: 25%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+}
+
+img { 
+  width: 100%;
+  height: auto;
+}
+
+.product_card {
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  color: #000;
+  border: 1px solid transparent;
+}
+
+.prodcut_card_detail_container {
+  // display: flex;
+  font-family: 'adihausDINRegular';
+  font-size: 12px;
+  min-height: 75px;
+  padding: 10px 10px 20px;
+}
+
+.product_card_subClasses {
+  color: #767677;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 10px;
+  min-height: 17px;
+}
+
+.product_card_detail_main {
+  height: 60px;
+  line-height: normal;
+}
+
+.product_card_product_name {
+  margin-bottom: 5px;
+  letter-spacing: .5px;
+  margin: 0 0 5px;
+  max-height: 30px;
+  overflow: hidden;
+  // font-size: 12px;
+
+}
+
+/*
+
+$(".js-carousel").each(function(){
+	var $carousel = $(this),
+		$carouselContainer = $carousel.find(".js-carousel-container"),
+		$carouselList = $carousel.find(".js-carousel-list"),
+		$carouselItem = $carousel.find(".js-carousel-item"),
+		$carouselButton = $carousel.find(".js-carousel-button"),
+		setItemWidth = function(){
+			$carouselList.removeAttr("style");
+			var curWidth = $($carouselItem[0]).outerWidth() * $carouselItem.length;
+			$carouselList.css("width", curWidth);
+		},
+		slide = function(){
+			var $button = $(this),
+				dir = $button.data("dir"),
+				curPos = parseInt($carouselList.css("left")) || 0,
+				moveto = 0,
+				containerWidth = $carouselContainer.outerWidth(),
+				listWidth = $carouselList.outerWidth(),
+				before = (curPos + containerWidth),
+				after = listWidth + (curPos - containerWidth);
+			if(dir=="next"){
+				moveto = (after < containerWidth) ? curPos - after : curPos - containerWidth;
+			} else {
+				moveto = (before >= 0) ? 0 : curPos + containerWidth;
+			}
+			
+			
+			$carouselList.animate({
+				left: moveto
+			});
+		};
+	$(window).resize(function(){
+		setItemWidth();
+	});
+	setItemWidth();
+	
+	$carouselButton.on("click", slide);
+});
+*/

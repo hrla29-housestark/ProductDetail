@@ -1,0 +1,90 @@
+
+@mixin product-description-btn() {
+  font-family: "adihausDINBold";
+  font-size: 13px;
+  text-decoration: none;
+  padding: 16px 10px;
+  text-align: center;
+  letter-spacing: 3px;
+  cursor: pointer;
+  filter: contrast(4.54);
+}
+
+@mixin product-description-li() {
+  font-size: 13px;
+  line-height: 16px;
+  box-sizing: border-box;
+  list-style: none;
+  display: inline-block;
+  width: 50%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.pdMainContainer {
+  margin-bottom: 40px;
+  padding: 0 15px;
+}
+
+.product_detail_title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  padding: 0 15px;
+}
+
+.pdLi {
+  @include product-description-li();
+  border: 1px solid #767677;;
+  // border-bottom: 1px solid #767677;
+}
+
+.pdBtn {
+  color: #767677;
+  @include product-description-btn();
+  &:hover {
+    color: black;
+  }
+}
+
+.pdLiActive {
+  @include product-description-li();
+  border: 1px solid black;
+  border-bottom: 3px solid black;
+}
+
+.pdBtnActive {
+  color: black;
+  @include product-description-btn();
+}
+
+// .pdBtn:hover {
+//   color: black;
+// }
+
+// @font-face {
+//   font-family: 'adihausDINBold';
+//   src: url('../assets/AdihausDIN-Bold.woff2') format('truetype');
+//   font-style: normal;
+//   font-weight: normal;
+// }
+
+// @font-face {
+//   font-family: 'adihausDINRegular';
+//   src: url('../assets/AdihausDIN-Regular.woff2') format('truetype');
+//   font-style: normal;
+//   font-weight: normal;
+// }
+
+// @font-face {
+//   font-family: 'adineuePROBold';
+//   src: url('../assets/adineuePRO-Bold.woff2') format('truetype');
+//   font-style: normal;
+//   font-weight: normal;
+// }
+
+// @font-face {
+//   font-family: 'adineuePRORegular';
+//   src: url('../assets/adineuePRO-Regular.woff2') format('truetype');
+//   font-style: normal;
+//   font-weight: normal;
+// }

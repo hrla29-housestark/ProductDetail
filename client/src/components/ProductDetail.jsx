@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from './ProductDetail.scss';
+import Style from './Style/ProductDetail.scss';
 import Description from './Description.jsx';
 import Specifications from './Specifications.jsx';
 
@@ -42,7 +42,7 @@ class ProductDetail extends React.Component{
   render() {
     return(
       <div className={Style.pdMainContainer}>
-        <h3 className={Style.pdTitle}>PRODUCT DETAILS</h3>
+        <h3 className={Style.product_detail_title}>PRODUCT DETAILS</h3>
           <ul>
             <li className={this.setStyle('description', Style.pdLiActive, Style.pdLi)} 
                 onClick={() => {this.changeView('description')}}>

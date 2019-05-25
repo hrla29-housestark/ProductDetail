@@ -1,0 +1,91 @@
+$global-spacing: 1.5px;
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.product_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 4.16667%;
+  width: 45.83333%;
+  float: left;
+  padding: 0 15px;
+}
+
+.product_details_heading {
+  letter-spacing: $global-spacing;
+  font-size: 26px;
+  line-height: 24px;
+  margin-bottom: 20px;
+  // display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.product_details_ad {
+  letter-spacing: $global-spacing;
+  font-size: 18px;
+  line-height: 16px;
+  margin-bottom: 20px;
+}
+
+.product_details_descriptions {
+  font-family: "adihausDINRegular";
+  line-height: 22px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+
+}
+
+// h4 {
+//   letter-spacing: 1.5px;
+//   font-size: 26px;
+//   display: inline-block;
+//   margin: 0px 0px 20px;
+//   width: 50%;
+// }
+
+// h5 {
+//   margin-bottom: 20px;
+//   font-size: 18px;
+//   line-height: 16px;
+//   width: 50%;
+//   display: inline-block;
+// }
+
+// p {
+//   box-sizing: border-box;
+//   width: 50%;
+//   border: 1px solid black;
+//   flex: 0 1 50%;
+//   font-family: 'adihausDINRegular';
+//   font-size: 16px;
+//   line-height: 22px;
+//   display: inline-block;
+// }
+
+// .row {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   border: 1px solid blue;
+// }
+
+.imageContainer {
+  border: 1px solid black;
+  flex: 0 1 50%;
+
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
