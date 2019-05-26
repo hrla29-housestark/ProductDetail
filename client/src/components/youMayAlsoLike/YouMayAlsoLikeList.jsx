@@ -12,13 +12,13 @@ class YouMayAlsoLikeList extends React.Component {
       limit: 4
     }
   }
-
+  
   render() {
-    console.log(this.state.relatedProdcuts, '!!!')
+    console.log(this.state.relatedProdcuts)
     return(
       <div className={Style.list_container}>
       <div className={Style.list_wrapper}>
-        {this.state.relatedProdcuts.map((item, index) => {
+        {this.props.simlarItems.map((item, index) => {
           return <YouMayAlsoLikeListEntry item={item} key={index}/>
         })}
       </div>

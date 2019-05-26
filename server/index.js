@@ -4,7 +4,7 @@ const path = require('path');
 const Router = require('./Router.js')
 
 const app = express();
-const port = 3000;
+const port = 3004;
 
 app.use(parser.json());
 app.use(parser.urlencoded({extended: true}));

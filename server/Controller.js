@@ -10,7 +10,7 @@ const getProductDetail = (req, res) => {
 };
 
 const getSimilarItems = (req, res) => {
-  console.log(req.params)
+  console.log(req.params, 'hi')
   let {type} = req.params;
   Helpers.getSimilarItemsHelper(type)
     .then((data) => {

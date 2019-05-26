@@ -9,8 +9,7 @@ class App extends React.Component{
     super();
     this.state = {
       data: [],
-      selectedProduct: [],
-      items: []
+      simlarItems: []
     }
     this.handleFetchPD = this.handleFetchPD.bind(this);
     this.handleFindSimilarItems = this.handleFindSimilarItems.bind(this);
@@ -18,7 +17,6 @@ class App extends React.Component{
 
   componentDidMount() {
     this.handleFetchPD();
-    // this.handleFindSimilarItems();
   }
 
   handleFetchPD() {
@@ -28,17 +26,19 @@ class App extends React.Component{
     .then(({data}) => {
       this.setState({
         data: data[0],
-      }, () => { this.handleFindSimilarItems() });
+      });
+      this.handleFindSimilarItems();
     })
     .catch(err => console.error(err));
   }  
 
   handleFindSimilarItems() {
+    
     axios
     .get(`/api/youMayAlsoLike/${this.state.data.productType}`)
     .then(({data}) => {
       this.setState({
-        items: data,
+        simlarItems: data,
       })
     })
     .catch(err => console.error(err));
@@ -48,7 +48,7 @@ class App extends React.Component{
     return(
       <div>
         <div className={Style.container}><ProductDetail data={this.state.data} handleFetchPD={this.handleFetchPD}/></div>
-        <div><YouMayAlsoLike items={this.state.items}/></div>
+        <div><YouMayAlsoLike simlarItems={this.state.simlarItems}/></div>
       </div>
     )
   }

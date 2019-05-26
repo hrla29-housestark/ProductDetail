@@ -12,13 +12,12 @@ html {
   font-size: 100%;
   box-sizing: border-box;
   font-family: "adineuePROBold", Helvetica, Arial, sans-serif;
+  
+  .container {
+    margin-bottom: 2.5rem;
+    padding: 0.94rem;
+  }
 }
-
-.container {
-  margin-bottom: 2.5rem;
-  padding: 0.94rem;
-}
-
 
 @font-face {
   font-family: 'adihausDINBold';

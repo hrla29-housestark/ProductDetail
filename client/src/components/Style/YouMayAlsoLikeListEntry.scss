@@ -40,9 +40,20 @@
   justify-content: space-between;
 }
 
+.img_wrap{
+  position: relative;
+  display: block;
+}
+
 img { 
   width: 100%;
   height: auto;
+}
+
+.img_heart {
+  position: absolute;
+  bottom: 40%;
+  right: 4%;
 }
 
 .product_card {
