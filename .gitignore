@@ -3,3 +3,4 @@ node_modules
 
 client/src/assets/
 client/dist/fonts/
+client/dist/bundle.js

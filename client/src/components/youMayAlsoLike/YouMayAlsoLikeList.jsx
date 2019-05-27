@@ -14,7 +14,7 @@ class YouMayAlsoLikeList extends React.Component {
   }
   
   render() {
-    console.log(this.state.relatedProdcuts)
+    
     return(
       <div className={Style.list_container}>
       <div className={Style.list_wrapper}>

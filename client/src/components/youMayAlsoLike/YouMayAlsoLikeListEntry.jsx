@@ -34,10 +34,11 @@ class YouMayAlsoLikeListListEntry extends React.Component{
                 <div className={Style.product_card_product_name}>{this.props.item.productName}</div>
                   <span>${this.props.item.price}</span>
                 </div>
-                <div>
-                
+                <div className={Style.stars}>
+                  <div className={Style.emptyStars}></div>
+                  <div className={Style.fullStars}></div>
                 </div>
-            </div>
+              </div>
         </div>
       </div>
     )

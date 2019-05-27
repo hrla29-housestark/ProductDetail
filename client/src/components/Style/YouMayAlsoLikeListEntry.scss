@@ -56,6 +56,36 @@ img {
   right: 4%;
 }
 
+.stars {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  color: white;
+  overflow: hidden;
+
+}
+.fullStars {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #767677;
+  width: 50%;
+}
+
+.emptyStars:before, .fullStars:before {
+content:"\2605\2605\2605\2605\2605";
+font-size: 6pt;
+}
+.emptyStars:before {
+-webkit-text-stroke: 1px #767677;
+}
+.fullStars:before {
+-webkit-text-stroke: 1px #767677;
+}
+
+
 .product_card {
   background-color: #fff;
   cursor: pointer;
