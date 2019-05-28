@@ -13,7 +13,8 @@ const adidasSchema = mongoose.Schema({
   description: {type: String},
   descriptionSlogan: {type: String},
   specification: {type: Array},
-  subClasses: {type: String}
+  subClasses: {type: String}, 
+  similarItems: {type: Array}
 });
 
 

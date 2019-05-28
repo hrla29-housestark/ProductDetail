@@ -209,6 +209,10 @@ const add = (arr) => {
     arr[i].specification = specificationPool;
     arr[i].imageUrl = imagePool[getRandomInt(0, imagePool.length -1)];
     arr[i].subClasses = subClassesPool[getRandomInt(0, subClassesPool.length-1)];
+    arr[i].similarItems = [];
+    while (arr[i].similarItems.length < 16) {
+      arr[i].similarItems.push(getRandomInt(0, 100));
+    }
   }
   return arr;
 }

@@ -10,48 +10,21 @@ class YouMayAlsoLike extends React.Component {
       simlarItems: this.props.items,
       data: this.props.data
     }
-    // this.handleFindSimilarItems = this.handleFindSimilarItems.bind(this);
-    // this.handleupdate = this.handleupdate.bind(this);
   }
-
-  // componentDidMount() {
-  //   this.handleupdate();
-
-  // }
-
-  // handleupdate() {
-  //   this.setState({
-  //     simlarItems: this.props.items
-  //   })
-  // }
-
-  // handleFindSimilarItems() {
-  //   console.log(this.state, 'hiiiii');
-  //   axios
-  //   .get(`/api/youMayAlsoLike/${this.state.data.productType}`)
-  //   .then(({data}) => {
-  //     this.setState({
-  //       items: data,
-  //     })
-  //   })
-  //   .catch(err => console.error(err));
-  // }
-
+  componentDidMount() {
+    this.setState({
+      simlarItems: this.props.items
+    }, () => {
+      console.log(this.state, 'List')
+    })
+  }
   render() {
-    console.log(this.props.similarItems)
+    console.log(this.props.simlarItems, 'also list');
     return(
       <div className={Style.pdMainContainer}>
         <h3 className={Style.product_detail_title}>You May Also Like</h3>
         <div className={Style.row}>
           <YouMayAlsoLikeList simlarItems={this.props.simlarItems}/>
-        </div>
-        <div>
-          <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-          </ul>
         </div>
       </div>
     )

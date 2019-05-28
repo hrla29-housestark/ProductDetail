@@ -2,7 +2,6 @@ import React from 'react';
 import Style from './Style/Description.scss';
 
 const Description = (props) => {
-  // console.log(props.data)
   return(
     <div className={Style.row}>
       <div className={Style.product_details}>

@@ -33,7 +33,6 @@ class App extends React.Component{
   }  
 
   handleFindSimilarItems() {
-    
     axios
     .get(`/api/youMayAlsoLike/${this.state.data.productType}`)
     .then(({data}) => {

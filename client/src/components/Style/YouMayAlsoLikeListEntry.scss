@@ -93,14 +93,20 @@ font-size: 6pt;
   width: 100%;
   color: #000;
   border: 1px solid transparent;
+  margin: 20px 20px;
 }
 
 .prodcut_card_detail_container {
+  margin: 20px 20px;
   // display: flex;
   font-family: 'adihausDINRegular';
   font-size: 12px;
   min-height: 75px;
-  padding: 10px 10px 20px;
+  padding: 8px 8px 15px;
+}
+
+.product_card:hover {
+  border: 1px solid black;
 }
 
 .product_card_subClasses {
@@ -122,8 +128,6 @@ font-size: 6pt;
   margin: 0 0 5px;
   max-height: 30px;
   overflow: hidden;
-  // font-size: 12px;
-
 }
 
 /*
