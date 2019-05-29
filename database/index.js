@@ -17,8 +17,6 @@ const adidasSchema = mongoose.Schema({
   similarItems: {type: Array}
 });
 
-
-
 const adidasModel = mongoose.model('adidasModel', adidasSchema);
 
 module.exports = adidasModel;

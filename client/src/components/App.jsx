@@ -9,14 +9,19 @@ class App extends React.Component{
     super();
     this.state = {
       data: [],
-      simlarItems: []
+      similarItems: [], 
+      imageSet: 0,
+      productDetailCurrentIdx: 0,
+      productDetailTranslateValue: 0
     }
     this.handleFetchPD = this.handleFetchPD.bind(this);
-    this.handleFindSimilarItems = this.handleFindSimilarItems.bind(this);
+    // this.handleFindSimilarItems = this.handleFindSimilarItems.bind(this);
+    this.handleSimlarItemsScrollRight = this.handleSimlarItemsScrollRight.bind(this);
   }
 
   componentDidMount() {
     this.handleFetchPD();
+
   }
 
   handleFetchPD() {
@@ -26,28 +31,46 @@ class App extends React.Component{
     .then(({data}) => {
       this.setState({
         data: data[0],
+        similarItems: data[0].similarItems, 
+        imageSet: data[0].similarItems.length/4
+      }, () => {
+        console.log(this.state);
       });
-      this.handleFindSimilarItems();
+      // this.handleFindSimilarItems();
     })
     .catch(err => console.error(err));
   }  
 
-  handleFindSimilarItems() {
-    axios
-    .get(`/api/youMayAlsoLike/${this.state.data.productType}`)
-    .then(({data}) => {
-      this.setState({
-        simlarItems: data,
-      })
-    })
-    .catch(err => console.error(err));
+  // handleFindSimilarItems() {
+  //   axios
+  //   .get(`/api/youMayAlsoLike/${this.state.data.productType}`)
+  //   .then(({data}) => {
+  //     this.setState({
+  //       similarItems: data,
+  //     })
+  //   })
+  //   .catch(err => console.error(err));
+  // }
+
+  handleSimlarItemsScrollRight() {
+    this.setState(prevState => ({
+      productDetailCurrentIdx: prevState.productDetailCurrentIdx + 1
+    }))
   }
+
+
 
   render() {
     return(
       <div>
         <div className={Style.container}><ProductDetail data={this.state.data} handleFetchPD={this.handleFetchPD}/></div>
-        <div><YouMayAlsoLike simlarItems={this.state.simlarItems}/></div>
+        <div><YouMayAlsoLike 
+              similarItems={this.state.similarItems}
+              imageSet={this.state.imageSet}
+              productDetailCurrentIdx={this.state.productDetailCurrentIdx}
+              productDetailTranslateValue={this.state.productDetailTranslateValue}
+              handleSimlarItemsScrollRight={this.state.handleSimlarItemsScrollRight}
+              /></div>
       </div>
     )
   }

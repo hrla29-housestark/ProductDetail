@@ -7,24 +7,30 @@ class YouMayAlsoLike extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      simlarItems: this.props.items,
-      data: this.props.data
+      similarItems: [],
+      data: []
     }
   }
+
   componentDidMount() {
     this.setState({
-      simlarItems: this.props.items
+      similarItems: this.props.similarItems
     }, () => {
-      console.log(this.state, 'List')
+      console.log(this.state, 'from youMayAlsoLike')
     })
   }
+
   render() {
-    console.log(this.props.simlarItems, 'also list');
+    console.log(this.props.similarItems)
     return(
       <div className={Style.pdMainContainer}>
         <h3 className={Style.product_detail_title}>You May Also Like</h3>
         <div className={Style.row}>
-          <YouMayAlsoLikeList simlarItems={this.props.simlarItems}/>
+          <YouMayAlsoLikeList 
+                        similarItems={this.props.similarItems}
+                        productDetailCurrentIdx={this.props.productDetailCurrentIdx}
+                        productDetailTranslateValue={this.props.productDetailTranslateValue}
+                        handleSimlarItemsScrollRight={this.props.handleSimlarItemsScrollRight}/>
         </div>
       </div>
     )
