@@ -515,7 +515,7 @@ addImg(data);
 const getRandom = () => {
   let result = [];
   let count = 0;
-  while (count < 8) {
+  while (count < 16) {
     result.push(data[getRandomInt(0, data.length-1)]);
     count++;
   }
@@ -532,13 +532,6 @@ const seedFunc = () => {
       .catch(err => console.log(err));
   }
 
-  // let result = getRandom();
-  // console.log(result);
-  // adidasModel.updateMany({similarItems: result})
-  //   .then(() => {
-  //     console.log('data seeded');
-  //   })
-  //   .catch(err => console.log(err));
 }
 
 seedFunc();

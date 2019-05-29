@@ -216,33 +216,12 @@ const add = (arr) => {
     arr[i].imageUrl = imagePool[getRandomInt(0, imagePool.length -1)];
     arr[i].subClasses = subClassesPool[getRandomInt(0, subClassesPool.length-1)];
     arr[i].similarItems = [];
-    // arr[i].similarItems.push(data[getRandomInt(0, data.length-1)]);
-    // while(arr[i].similarItems.length <= 3) {
-    //   if (arr[i].productType === 'shoes') {
-    //     arr[i].similarItems.push(shoespool[0]);
-    //   } else if (arr[i].productType === 'hoodies and sweatshirts') {
-    //     arr[i].similarItems.push(hoodiesAndSweatshirts[0]);
-    //   } else {
-    //     arr[i].similarItems.push(pantspool[0])
-    //   }
-    // }
-  }
-  // console.log(arr.similarItems[0]);
-  return arr;
-}
-
-const addSimi = (arr) => {
-  for (let i = 0; i < arr.length; i++) {
-    while(arr[i].similarItems.length <= 3) {
-      arr[i].similarItems.push(data[getRandomInt(0, data.length-1)]);
-    }
   }
   return arr;
 }
-
 
 let newData = add(data);
-// let final = addSimi(newData);
+
 
 //seed the data to the database
 const seefunc = () => {

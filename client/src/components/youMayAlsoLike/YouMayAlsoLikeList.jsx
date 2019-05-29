@@ -22,17 +22,28 @@ class YouMayAlsoLikeList extends React.Component {
 
   handleSlideRight(e) {
     e.preventDefault();
+    let target = 'li' + (this.state.currentIdx+1)
+    console.log(target)
     this.setState({
-      currentIdx: this.state.currentIdx+1
+      currentIdx: this.state.currentIdx+1,
+      li0: [false, 0],
+      li1: [false, 1],
+      li2: [false, 2],
+      li3: [false, 3],
+      [target]: [true, this.state.currentIdx+1],
     })
   }
 
   handleSlideleft(e) {
     e.preventDefault();
+    let target = 'li' + (this.state.currentIdx-1)
     this.setState({
-      currentIdx: this.state.currentIdx-1
-    }, () => {
-      console.log(this.state)
+      currentIdx: this.state.currentIdx-1,
+      li0: [false, 0],
+      li1: [false, 1],
+      li2: [false, 2],
+      li3: [false, 3],
+      [target]: [true, this.state.currentIdx-1],
     })
   }
 
