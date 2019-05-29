@@ -41,17 +41,6 @@ class App extends React.Component{
     .catch(err => console.error(err));
   }  
 
-  // handleFindSimilarItems() {
-  //   axios
-  //   .get(`/api/youMayAlsoLike/${this.state.data.productType}`)
-  //   .then(({data}) => {
-  //     this.setState({
-  //       similarItems: data,
-  //     })
-  //   })
-  //   .catch(err => console.error(err));
-  // }
-
   handleSimlarItemsScrollRight() {
     this.setState(prevState => ({
       productDetailCurrentIdx: prevState.productDetailCurrentIdx + 1
