@@ -50,7 +50,6 @@ class YouMayAlsoLikeList extends React.Component {
   handleLiClick(e) {
     let { id } = e.target
     let num = id[2];
-    console.log(num)
     this.setState({
       li0: [false],
       li1: [false],
@@ -75,45 +74,46 @@ class YouMayAlsoLikeList extends React.Component {
 
     return(
       <div className={Style.list_container}>
+
         <div className={Style.right_arrow}>
           <svg onClick={(e) => {this.handleSlideRight(e)}} className={Style.arrow_icon} viewBox="0 0 10 24" width="5%" height="5%"><path fill="none" stroke="currentColor" strokeMiterlimit="10" strokeWidth="2" d="M2 5.5L8.5 12 2 18.5"></path></svg>
         </div>
         <div className={Style.left_arrow}>
           <svg onClick={(e) => {this.handleSlideleft(e)}} className={Style.arrow_icon}id="arrow-left" viewBox="0 0 10 24" width="100%" height="100%"><path fill="none" stroke="currentColor" strokeMiterlimit="10" strokeWidth="2" d="M8 5.5L1.5 12 8 18.5"></path></svg>
         </div>
-          <div style={moveWithArrow}>
-        {this.props.similarItems.map((item, index) => {
-          return <YouMayAlsoLikeListEntry item={item} key={index}/>
-        })}
-        <span>
-        </span>
-      </div>
-      <div>
-          <ul className={Style.li_indicator_wrapper}>
-            <li className={Style.li_indicator_item}>
-              <span id='li0'
-              value='0'
-              onClick={(e) => {this.handleLiClick(e)}}
-              className={this.state.li0[0] === true ? Style.li_indicator_dot_selected : Style.li_indicator_dot}></span>
-            </li>
-            <li className={Style.li_indicator_item}>
-              <span id='li1'
-                onClick={(e) => {this.handleLiClick(e)}}
-                className={this.state.li1[0] === true ? Style.li_indicator_dot_selected : Style.li_indicator_dot}></span>
-            </li>
-            <li className={Style.li_indicator_item}>
-              <span id='li2'
-                onClick={(e) => {this.handleLiClick(e)}}
-                className={this.state.li2[0] === true ? Style.li_indicator_dot_selected : Style.li_indicator_dot}></span>
-            </li>
-            <li className={Style.li_indicator_item}>
-              <span id='li3'
-                onClick={(e) => {this.handleLiClick(e)}}
-                className={this.state.li3[0] === true ? Style.li_indicator_dot_selected : Style.li_indicator_dot}></span>
-            </li>
-          </ul>
+
+        <div style={moveWithArrow}>
+          {this.props.similarItems.map((item, index) => {
+            return <YouMayAlsoLikeListEntry item={item} key={index}/>
+          })}
         </div>
-    </div>
+
+        <div>
+            <ul className={Style.li_indicator_wrapper}>
+              <li className={Style.li_indicator_item}>
+                <span id='li0'
+                value='0'
+                onClick={(e) => {this.handleLiClick(e)}}
+                className={this.state.li0[0] === true ? Style.li_indicator_dot_selected : Style.li_indicator_dot}></span>
+              </li>
+              <li className={Style.li_indicator_item}>
+                <span id='li1'
+                  onClick={(e) => {this.handleLiClick(e)}}
+                  className={this.state.li1[0] === true ? Style.li_indicator_dot_selected : Style.li_indicator_dot}></span>
+              </li>
+              <li className={Style.li_indicator_item}>
+                <span id='li2'
+                  onClick={(e) => {this.handleLiClick(e)}}
+                  className={this.state.li2[0] === true ? Style.li_indicator_dot_selected : Style.li_indicator_dot}></span>
+              </li>
+              <li className={Style.li_indicator_item}>
+                <span id='li3'
+                  onClick={(e) => {this.handleLiClick(e)}}
+                  className={this.state.li3[0] === true ? Style.li_indicator_dot_selected : Style.li_indicator_dot}></span>
+              </li>
+            </ul>
+          </div>
+      </div>
     )
   }
 }

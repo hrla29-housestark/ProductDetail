@@ -1,16 +1,3 @@
-// .product_card_container {
-//   display: block;
-//   background-color: #fff;
-//   cursor: pointer;
-//   position: relative;
-//   border: 1px solid transparent;
-//   // width: 100%;
-//   float: left; 
-//   min-width: 0;
-//   // box-orient:horizontal;
-//   flex: 0 1 (100 / 4 ) * 1%;
-// }
-
 @mixin test($order) {
   order: $order;
 }
@@ -23,10 +10,17 @@
   flex-shrink: 0;
   padding: 0;
   margin: 0;
-  // flex: 2 1 auto;
-  // flex-wrap: nowrap;
-  // overflow: hidden;
   justify-content: space-between;
+}
+
+.product_card {
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  color: #000;
+  border: 1px solid transparent;
+  margin: 20px 20px;
 }
 
 .product_card_container_left {
@@ -86,15 +80,15 @@ font-size: 6pt;
 }
 
 
-.product_card {
-  background-color: #fff;
-  cursor: pointer;
-  position: relative;
-  width: 100%;
-  color: #000;
-  border: 1px solid transparent;
-  margin: 20px 20px;
-}
+// .product_card {
+//   background-color: #fff;
+//   cursor: pointer;
+//   position: relative;
+//   width: 100%;
+//   color: #000;
+//   border: 1px solid transparent;
+//   margin: 20px 20px;
+// }
 
 .prodcut_card_detail_container {
   margin: 20px 20px;
@@ -129,45 +123,3 @@ font-size: 6pt;
   max-height: 30px;
   overflow: hidden;
 }
-
-/*
-
-$(".js-carousel").each(function(){
-	var $carousel = $(this),
-		$carouselContainer = $carousel.find(".js-carousel-container"),
-		$carouselList = $carousel.find(".js-carousel-list"),
-		$carouselItem = $carousel.find(".js-carousel-item"),
-		$carouselButton = $carousel.find(".js-carousel-button"),
-		setItemWidth = function(){
-			$carouselList.removeAttr("style");
-			var curWidth = $($carouselItem[0]).outerWidth() * $carouselItem.length;
-			$carouselList.css("width", curWidth);
-		},
-		slide = function(){
-			var $button = $(this),
-				dir = $button.data("dir"),
-				curPos = parseInt($carouselList.css("left")) || 0,
-				moveto = 0,
-				containerWidth = $carouselContainer.outerWidth(),
-				listWidth = $carouselList.outerWidth(),
-				before = (curPos + containerWidth),
-				after = listWidth + (curPos - containerWidth);
-			if(dir=="next"){
-				moveto = (after < containerWidth) ? curPos - after : curPos - containerWidth;
-			} else {
-				moveto = (before >= 0) ? 0 : curPos + containerWidth;
-			}
-			
-			
-			$carouselList.animate({
-				left: moveto
-			});
-		};
-	$(window).resize(function(){
-		setItemWidth();
-	});
-	setItemWidth();
-	
-	$carouselButton.on("click", slide);
-});
-*/
